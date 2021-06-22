@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
+  }
 
 body{
   display: flex;
@@ -52,6 +52,7 @@ form > input[type="submit"]{
   grid-template-rows: repeat(3, 1fr);
   margin:40px auto; 
 }
+
 
 .grid-item{
     display: flex;

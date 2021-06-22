@@ -11,7 +11,8 @@ const Game = (function(doc){
     var container = doc.querySelector(".container");
     var player1 = "";
     var player2 = "";
-
+    var isAI = false;
+    
     const reset=()=>{
        gridItems.forEach((item)=>{
            item.textContent = "";
@@ -48,6 +49,11 @@ const Game = (function(doc){
             return item.textContent;
         });
     }
+
+    const emptyCells = ()=>{
+       return gridItems.filter((item)=> item.textContent==="");          
+    } 
+
     const input = (item) => { 
      if(isX){
          result.textContent = player2 + "'s turn";
@@ -89,5 +95,4 @@ const Game = (function(doc){
     return {start};
  }(document));
 
- Game.start();
-
+Game.start();
