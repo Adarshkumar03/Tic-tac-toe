@@ -11,6 +11,13 @@
     <header>
         <h1>Tic-tac-toe</h1>
     </header>
+    <form action="" class="form">
+        <label for="player1">Player 1</label>
+        <input type="text" name="player1" id="player1" placeholder="Enter name" value="" required>
+        <label for="player2">Player 2</label>
+        <input type="text" name="player2" id="player2" placeholder="Enter Name" value="" required>
+        <input type="submit" value="submit" class="submit">
+    </form>
     <div class="container">
         <div class="grid-item"></div>
         <div class="grid-item"></div>
@@ -22,10 +29,10 @@
         <div class="grid-item"></div>
         <div class="grid-item"></div>
     </div>
-    <div class="result">
-        <h2>Result:</h2>
-    </div>
+    <h2 class="result"></h2>
     <button class="button">Restart</button>
+   
+    <!-- <div class="overlay"></div> -->
     <script src="script.js"></script>
 </body>
 </html>
