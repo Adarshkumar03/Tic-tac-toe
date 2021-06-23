@@ -122,11 +122,9 @@ form > input[type="submit"]:hover{
 
 .grid-item{
     display: flex;
-    background: #FF5F6D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(75deg, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(75deg, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: #FF5F6D;
+    background: -webkit-linear-gradient(75deg, #FFC371, #FF5F6D); 
+    background: linear-gradient(75deg, #FFC371, #FF5F6D); 
     align-items: center;
     justify-content: center;
     font-size: 60px;
@@ -161,6 +159,12 @@ background: linear-gradient(75deg, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Fire
   background-color: var(--pink);
   color:var(--bg);
   border:1px solid var(--pink);
+}
+
+@media screen and (max-width:480px) {
+  html{
+    font-size:60%;
+  }
 }
 
 /* .overlay{
