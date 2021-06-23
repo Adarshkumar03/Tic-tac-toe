@@ -14,7 +14,11 @@ header{
   font-size: 25px;
 }
 
-button{
+.restart{
+  display: none;
+}
+
+.back{
   display: none;
 }
 
@@ -33,6 +37,7 @@ form{
   text-align: left;
   /* transform: translate(-50%, -50%) scale(0); */
   transition: 200ms ease-in-out;
+  opacity: 0;
 } 
 
 form > input{
@@ -42,6 +47,20 @@ form > input{
 form > input[type="submit"]{
   margin:0;
   cursor: pointer;
+}
+
+.game-type{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.game-type button{
+  display: inline-block;
+  width:90px;
+  text-align: center;
+  padding: 5px;
+  margin:0 10px;
 }
 
 .container{ 
