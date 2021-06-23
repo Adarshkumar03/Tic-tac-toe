@@ -5,6 +5,9 @@
   }
 
 body{
+  background-color: #FFF5FD;
+}  
+main{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +15,13 @@ body{
 }
 header{
   font-size: 25px;
+  background-color: #022E57;
+  color:#FFF5FD;
+  width:100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .restart{
@@ -29,9 +39,10 @@ form{
   left: 50%; */
   min-width: 250px;
   padding: 15px;
+  margin-top: 80px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: #98E19A;
+  background-color: #005A8D;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -52,15 +63,18 @@ form > input[type="submit"]{
 .game-type{
   display: flex;
   justify-content: space-around;
-  margin: 15px 0;
+  margin: 80px 0 10px 0;
 }
 
 .game-type button{
   display: inline-block;
   width:90px;
   text-align: center;
-  padding: 5px;
+  padding: 8px;
   margin:0 10px;
+  background-color: #FF96AD;
+  color:#FFF5FD;
+  border:1px solid #FF96AD;
 }
 
 .container{ 
@@ -69,7 +83,7 @@ form > input[type="submit"]{
   height:430px;
   grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: repeat(3, 1fr);
-  margin:40px auto; 
+  margin:10px auto; 
 }
 
 
@@ -85,6 +99,20 @@ form > input[type="submit"]{
 
 .result{
   display: none;
+  margin-top:70px;
+}
+
+.endgame{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.endgame button{
+  margin: 0 10px;
+  padding: 5px;
+  background-color: #005A8D;
+  color:#FFF5FD;
+  border:1px solid #005A8D;
 }
 
 /* .overlay{

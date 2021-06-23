@@ -11,10 +11,10 @@ const Game = (function(doc){
     var backButton = doc.querySelector(".back");
     var player1 = "";
     var player2 = "";
-    var gameType = "";
+    var gameType = doc.querySelector(".game-type");
     var twoPlayer = doc.querySelector(".two-player"); 
     var ai = doc.querySelector(".ai"); 
-      
+    backButton.addEventListener("click", window.location.reload.bind(window.location));      
     const reset=()=>{
        gridItems.forEach((item)=>{
            item.textContent = "";
@@ -30,15 +30,18 @@ const Game = (function(doc){
         restartButton.addEventListener("click", reset);
         twoPlayer.addEventListener("click", ()=>{
            form.style.opacity = "1";
-           gameType = "two-player";       
+           gameType.style.display = "none";
+
         })
         submitButton.addEventListener("click", mode2);
 
         ai.addEventListener("click", ()=>{
+            gameType.style.display = "none";
             form.style.display = "none";
             form.reset();
             container.style.display = "grid";
             result.style.display = "block";
+            backButton.style.display = "inline-block";
             basicAI();
          })          
     }
@@ -90,14 +93,10 @@ const Game = (function(doc){
         })
     }
     
-    const isTie = ()=>{
-        return gridArray.every((item)=> {
-            return item.textContent === "X" || item.textContent === "O";
-        });
-    }
 
     const mode2 = () => {
         container.style.display = "grid";
+        backButton.style.display = "inline-block";
         result.style.display = "block";
         player1 = form.elements.player1.value;
         player2 = form.elements.player2.value;
@@ -146,6 +145,11 @@ const Game = (function(doc){
           return gridArray[indices[0]]==ch&&gridArray[indices[1]]===ch&&gridArray[indices[2]]==ch
       })
       return res;
+    }
+    const isTie = ()=>{
+        return gridArray.every((item)=> {
+            return item === "X" || item === "O";
+        });
     }
     return {start};
  }(document));
