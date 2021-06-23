@@ -5,7 +5,6 @@ const Game = (function(doc){
     var result = doc.querySelector(".result");
     var restartButton = doc.querySelector(".restart");
     var gridItems = [...doc.querySelectorAll(".grid-item")];
-    var submitButton = doc.querySelector(".submit");
     var form = doc.querySelector(".form");
     var container = doc.querySelector(".container");
     var backButton = doc.querySelector(".back");
@@ -30,11 +29,14 @@ const Game = (function(doc){
         restartButton.addEventListener("click", reset);
         twoPlayer.addEventListener("click", ()=>{
            form.style.opacity = "1";
+           form.reset();
            gameType.style.display = "none";
-
+           form.addEventListener("submit", function(e){
+               e.preventDefault();
+               mode2();
+           });
         })
-        submitButton.addEventListener("click", mode2);
-
+         
         ai.addEventListener("click", ()=>{
             gameType.style.display = "none";
             form.style.display = "none";

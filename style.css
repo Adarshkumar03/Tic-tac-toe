@@ -2,10 +2,18 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
+}
+
+:root{
+  --main:#252A34;
+  --bg:#EAEAEA;
+  --light-blue:#364F6B;
+  --pink:#FF2E63;
+}
 
 body{
-  background-color: #FFF5FD;
+  background-color: var(--bg);
+  font-family: 'Work Sans', sans-serif;
 }  
 main{
   display: flex;
@@ -15,8 +23,8 @@ main{
 }
 header{
   font-size: 25px;
-  background-color: #022E57;
-  color:#FFF5FD;
+  background-color: var(--main);
+  color:var(--bg);
   width:100%;
   text-align: center;
   position: fixed;
@@ -37,18 +45,21 @@ form{
   z-index: 1;
   top: 50%;
   left: 50%; */
-  min-width: 250px;
+  min-width: 300px;
   padding: 15px;
   margin-top: 80px;
   border: 2px solid black;
-  border-radius: 10px;
-  background-color: #005A8D;
+  border-radius: 5px;
+  background-color: var(--light-blue);
   display: flex;
   flex-direction: column;
   text-align: left;
   /* transform: translate(-50%, -50%) scale(0); */
   transition: 200ms ease-in-out;
   opacity: 0;
+  color:var(--bg);
+  font-size:20px;
+  font-weight: 700;
 } 
 
 form > input{
@@ -58,6 +69,17 @@ form > input{
 form > input[type="submit"]{
   margin:0;
   cursor: pointer;
+  background-color: var(--pink);
+  color: var(--bg);
+  border:1px solid var(--pink);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+form > input[type="submit"]:hover{
+  background-color: var(--bg);
+  color: var(--main);
+  border:1px solid var(--bg);
 }
 
 .game-type{
@@ -68,17 +90,28 @@ form > input[type="submit"]{
 
 .game-type button{
   display: inline-block;
-  width:90px;
+  width:120px;
   text-align: center;
+  font-size:18px;
+  font-weight: 700;
   padding: 8px;
   margin:0 10px;
-  background-color: #FF96AD;
-  color:#FFF5FD;
-  border:1px solid #FF96AD;
+  background-color: var(--pink);
+  color:var(--bg);
+  border:1px solid var(--pink);
+  transition: 0.5s all;
+  border-radius: 5px;
 }
+.game-type button:hover{
+  background-color: var(--light-blue);
+  border:1px solid var(--light-blue);
+}
+
+
 
 .container{ 
   display: none;
+  padding:0;
   width:430px;
   height:430px;
   grid-template-columns: repeat(3, 1fr); 
@@ -89,12 +122,18 @@ form > input[type="submit"]{
 
 .grid-item{
     display: flex;
+    background: #FF5F6D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(75deg, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(75deg, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     align-items: center;
     justify-content: center;
     font-size: 60px;
-    margin:7px;
+    margin:5px;
     border-radius: 10px;
     border: 1px solid black;
+    font-weight:600;
 }
 
 .result{
@@ -109,10 +148,19 @@ form > input[type="submit"]{
 
 .endgame button{
   margin: 0 10px;
-  padding: 5px;
-  background-color: #005A8D;
-  color:#FFF5FD;
-  border:1px solid #005A8D;
+  padding: 10px;
+  font-size:15px;
+  font-weight: 700;
+  background-color: var(--light-blue);
+  color:var(--bg);
+  border:1px solid var(--light-blue);
+  border-radius: 5px;
+}
+
+.endgame button:hover{
+  background-color: var(--pink);
+  color:var(--bg);
+  border:1px solid var(--pink);
 }
 
 /* .overlay{
