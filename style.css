@@ -114,6 +114,7 @@ form > input[type="submit"]:hover{
   padding:0;
   width:430px;
   height:430px;
+  min-width:100%;
   grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: repeat(3, 1fr);
   margin:10px auto; 
