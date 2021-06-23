@@ -9,4 +9,7 @@ Javascript project from The Odin Project
 * bind()
 * form.reset()
 * tic-tac-toe ai
+## Link
+https://tic-tac-toe-adarsh.netlify.app/
+
 
